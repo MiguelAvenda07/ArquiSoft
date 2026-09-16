@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f0f2f5; /* Gris muy claro para el fondo */
+  font-family: 'Inter', sans-serif;
+  color: #333;
+}
+
+/* Estilos para los enlaces del menú principal */
+.menu-link {
+  display: block;
+  padding: 20px 25px;
+  margin-bottom: 15px;
+  background-color: white;
+  color: #00563F; /* Verde oscuro */
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: all 0.3s ease; /* Animación suave */
+}
+
+/* Efecto al pasar el mouse por encima */
+.menu-link:hover {
+  background-color: #00563F;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Botón de regresar */
+.back-button {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: #00563F;
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid #00563F;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #00563F;
+  color: white;
+}
