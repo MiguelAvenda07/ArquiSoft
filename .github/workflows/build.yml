@@ -44,8 +44,8 @@ jobs:
           cache: maven
       - name: Run tests
         run: mvn -B test
-  sonar:
-    name: Sonar Cloud Analysis
+  quality:
+    name: Sonar Cloud Analysis + Coveralls
     needs: tests
     runs-on: ubuntu-latest
     services:
@@ -85,3 +85,9 @@ jobs:
           -Dsonar.projectKey=MiguelAvenda07_ArquiSoft
           -Dsonar.organization=miguelavenda07
           -Dsonar.host.url=https://sonarcloud.io
+      - name: Coveralls
+        uses: coverallsapp/github-action@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          file: target/site/jacoco/jacoco.xml
+          format: jacoco
