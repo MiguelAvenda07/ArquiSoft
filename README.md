@@ -1,0 +1,2 @@
+[![Coverage Status](https://coveralls.io/repos/github/MiguelAvenda07/ArquiSoft/badge.svg?branch=feature/cobertura)](https://coveralls.io/github/MiguelAvenda07/ArquiSoft?branch=feature/cobertura)
+[![Known Vulnerabilities](https://snyk.io/test/github/MiguelAvenda07/ArquiSoft/badge.svg)](https://snyk.io/test/github/MiguelAvenda07/ArquiSoft)
