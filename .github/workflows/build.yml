@@ -103,10 +103,12 @@ jobs:
           java-version: ${{ env.JAVA_VERSION }}
           cache: maven
       - uses: snyk/actions/setup@master
+      - name: Resolver dependencias
+        run: mvn -B -DskipTests install
       - name: Snyk test
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        run: snyk test --severity-threshold=high
+        run: snyk test --file=pom.xml --severity-threshold=high -d
         continue-on-error: true
       - name: Snyk monitor
         if: github.ref == 'refs/heads/main'
