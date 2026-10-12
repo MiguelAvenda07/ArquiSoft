@@ -108,10 +108,10 @@ jobs:
       - name: Snyk test
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        run: snyk test --file=pom.xml --severity-threshold=high -d
+        run: snyk test --file=pom.xml --severity-threshold=high --org=miguelavenda07
         continue-on-error: true
       - name: Snyk monitor
         if: github.ref == 'refs/heads/main'
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        run: snyk monitor
+        run: snyk monitor --org=miguelavenda07
