@@ -175,6 +175,7 @@
                 </executions>
             </plugin>
         </plugins>
+        <finalName>lab2arq</finalName>
     </build>
 
 </project>
