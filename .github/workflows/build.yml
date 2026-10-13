@@ -86,7 +86,7 @@ jobs:
           -Dsonar.organization=miguelavenda07
           -Dsonar.host.url=https://sonarcloud.io
       - name: Coveralls
-        uses: coverallsapp/github-action@v2
+        uses: coverallsapp/github-action@8d6379e14d29928660c4ba802d8e85393440b329
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           file: target/site/jacoco/jacoco.xml
@@ -102,7 +102,7 @@ jobs:
           distribution: temurin
           java-version: ${{ env.JAVA_VERSION }}
           cache: maven
-      - uses: snyk/actions/setup@master
+      - uses: snyk/actions/setup@11b673cfb4b0dc0d860a1323caa199d54950dcce
       - name: Resolver dependencias
         run: mvn -B -DskipTests install
       - name: Snyk test
