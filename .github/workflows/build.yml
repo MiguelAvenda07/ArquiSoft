@@ -103,7 +103,7 @@ jobs:
           java-version: ${{ env.JAVA_VERSION }}
           cache: maven
       - name: Instalar Snyk CLI
-        run: npm install -g snyk
+        run: npm install -g snyk --ignore-scripts
       - name: Resolver dependencias
         run: mvn -B -DskipTests install
       - name: Snyk test
