@@ -149,7 +149,7 @@ jobs:
         with:
         #Set artifact name
           name: artifact
-        #From this path
+        #From this path.
           path: target/lab2p2026.jar
 
       - name: Build & push Docker image
