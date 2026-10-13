@@ -102,8 +102,7 @@ jobs:
           distribution: temurin
           java-version: ${{ env.JAVA_VERSION }}
           cache: maven
-      - name: Instalar Snyk CLI
-        run: npm install -g snyk --ignore-scripts
+      - uses: snyk/actions/setup@11b673cfb4b0dc0d860a1323caa199d54950dcce
       - name: Resolver dependencias
         run: mvn -B -DskipTests install
       - name: Snyk test
