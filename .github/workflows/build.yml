@@ -119,7 +119,7 @@ jobs:
   #Build's job
   build:
   #Depends on sonar's job
-    needs: sonar
+    needs: quality
     name: Build
     #Run on Ubuntu using the latest version
     runs-on: ubuntu-latest
