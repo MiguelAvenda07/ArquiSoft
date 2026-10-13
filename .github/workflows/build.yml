@@ -149,7 +149,7 @@ jobs:
         with:
         #Set artifact name
           name: artifact
-        #From this path
+        #From this path.
           path: target/lab2p2026.jar
 
       - name: Build & push Docker image
@@ -161,3 +161,12 @@ jobs:
           dockerfile: Dockerfile
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
+
+  deploy:
+    name: Deploy a Render
+    needs: build
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Disparar redeploy en Render
+        run: curl -fsS -X POST "${{ secrets.RENDER_DEPLOY_HOOK_URL }}"
